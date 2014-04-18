@@ -20,6 +20,8 @@
 		//set sales and royalties
 		$sales  = $data->num_happy_paid_purchases;
 		$dollas = $data->total_book_royalties;
+		$unpaid = $data->unpaid_royalties;
+		$next   = $data->royalties_due_on_first_of_next_month;
 	}
 ?>
 
@@ -34,9 +36,19 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td style="text-align:center;">Leanpub</td>
+			<td style="text-align:center;">Total</td>
 			<td style="text-align:center;"><?=$sales?></td>
 			<td style="text-align:center;">$<?=$dollas?></td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">Unpaid</td>
+			<td style="text-align:center;"></td>
+			<td style="text-align:center;">$<?=$unpaid?></td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">Next Payment</td>
+			<td style="text-align:center;"></td>
+			<td style="text-align:center;">$<?=$next?></td>
 		</tr>
 	</tbody>
 </table>
