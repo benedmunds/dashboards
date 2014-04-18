@@ -1,6 +1,8 @@
 <?php
 	$apiKey = 'XXX';
 
+	date_default_timezone_set('America/Los_Angeles');
+
 	//pull the sales data from the API
 	$ch = curl_init('https://leanpub.com/buildingsecurephpapps/sales.json?api_key=' . $apiKey);
 
@@ -46,7 +48,7 @@
 			<td style="text-align:center;">$<?=$unpaid?></td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">Next Payment</td>
+			<td style="text-align:center;"><?=date('M', strtotime('next month'))?> 1st</td>
 			<td style="text-align:center;"></td>
 			<td style="text-align:center;">$<?=$next?></td>
 		</tr>
