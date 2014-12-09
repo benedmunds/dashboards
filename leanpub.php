@@ -83,6 +83,11 @@
 			<td style="text-align:center;">$<?=$nodeDollas?></td>
 		</tr>
 		<tr>
+			<td style="text-align:center;"></td>
+			<td style="text-align:center;"></td>
+			<td style="text-align:center;"></td>
+		</tr>
+		<tr>
 			<td style="text-align:center;">Total</td>
 			<td style="text-align:center;"><?=$sales?></td>
 			<td style="text-align:center;">$<?=$dollas?></td>
